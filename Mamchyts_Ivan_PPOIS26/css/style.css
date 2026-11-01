@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font: 1em sans-serif;
+    background: url(/Mamchyts_Ivan_PPOIS26/images/cosmos.jpg);
+    background-size: cover;
+}
+.earth {
+    width: 300px;
+    height: auto;
+    padding: 100px;
+    position: relative;
+    z-index: 10;
+}
+.moon {
+    top: 170px;
+    left: 170px;
+    position: absolute;
+    -webkit-animation: linear 5s orbita infinite;
+    animation: linear 5s orbita infinite;
+}
+@-webkit-keyframes orbita {
+    0% {
+        width: 72px;
+        height: auto;
+    }
+    24% {
+        z-index: 0;
+    }
+    25% {
+        left: 380px;
+        top: 130px;
+        z-index: 20;
+    }
+    50% {
+        width: 128px;
+    }
+    74% {
+        z-index: 20;
+    }
+    75% {
+        top: 300px;
+        left: 40px;
+        z-index: 0;
+    }
+    100% {
+        width: 72px;
+        height: auto;
+        transform: rotate(360deg);
+    }
+}
+@keyframes orbita {
+    0% {
+        width: 72px;
+        height: auto;
+    }
+    24% {
+        z-index: 0;
+    }
+    25% {
+        left: 380px;
+        top: 130px;
+        z-index: 20;
+    }
+    50% {
+        width: 128px;
+    }
+    74% {
+        z-index: 20;
+    }
+    75% {
+        top: 300px;
+        left: 40px;
+        z-index: 0;
+    }
+    100% {
+        width: 72px;
+        height: auto;
+        transform: rotate(360deg);
+    }
+}
