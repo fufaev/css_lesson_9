@@ -14,13 +14,26 @@ body {
     padding: 100px;
     position: relative;
     z-index: 10;
+    animation: linear 10s earth infinite;
+    -webkit-animation: linear 10s earth infinite;
+}
+@keyframes earth {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes earth {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .moon {
     top: 170px;
     left: 170px;
     position: absolute;
-    -webkit-animation: linear 5s orbita infinite;
-    animation: linear 5s orbita infinite;
+    -webkit-animation: linear 6s orbita infinite;
+    animation-timing-function: linear;
+    animation: linear 6s orbita infinite;
 }
 @-webkit-keyframes orbita {
     0% {
@@ -82,3 +95,8 @@ body {
         transform: rotate(360deg);
     }
 }
+
+/*
+Луна уходит на задний план из-за того что z-index становится меньше, чем у Земли на половине цикла вращения.
+Свойство infinite обеспечивает бесконечное повторение анимации
+*/
