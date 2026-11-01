@@ -100,3 +100,58 @@ body {
 Луна уходит на задний план из-за того что z-index становится меньше, чем у Земли на половине цикла вращения.
 Свойство infinite обеспечивает бесконечное повторение анимации
 */
+
+@media screen and (max-width: 480px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .earth { 
+        width: 150px;
+        padding: 0;
+    } 
+
+    .moon { 
+        top: 55%; 
+        left: 25%; 
+        animation: linear 6s orbita-mobile infinite;
+        -webkit-animation: linear 6s orbita-mobile infinite;
+    } 
+     @keyframes orbita-mobile { 
+        0% { width: 35px;
+        height: auto; } 
+        15% { z-index: 20; } 
+        25% { left: 45%; 
+            top: 50%; 
+            z-index: 20; } 
+        50% { width: 60px;
+            height: auto; } 
+        74% { z-index: 20; } 
+        75% { top: 38%; 
+            left: 65%; 
+            z-index: 0; } 
+        100% { width: 35px;
+            height: auto; 
+            transform: rotate(360deg); } 
+    } 
+    @-webkit-keyframes orbita-mobile { 
+         0% { width: 35px;
+        height: auto; } 
+        15% { z-index: 20; } 
+        25% { left: 45%; 
+            top: 50%; 
+            z-index: 20; } 
+        50% { width: 60px;
+            height: auto; } 
+        74% { z-index: 20; } 
+        75% { top: 38%; 
+            left: 65%; 
+            z-index: 0; } 
+        100% { width: 35px;
+            height: auto; 
+            transform: rotate(360deg); } 
+    }
+}
